@@ -1,15 +1,15 @@
 <script context="module">
-    import { Editor } from 'bytemd'
-    import 'bytemd/dist/index.min.css'
+    import { Editor } from "bytemd";
+    import "bytemd/dist/index.min.css";
 
-    export const hydrate = true
+    export const hydrate = true;
 </script>
 
 <script lang="ts">
-    let value
+    import { text } from "./store";
     function handleChange(e) {
-        value = e.detail.value
+        text.change(e.detail.value);
     }
 </script>
 
-<Editor {value} on:change={handleChange} />
+<Editor value={$text} on:change={handleChange} />
