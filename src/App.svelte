@@ -12,4 +12,4 @@
     }
 </script>
 
-<Editor value={$text} on:change={handleChange} />
+<Editor value={$text} sanitize="" placeholder="" editorConfig="" locale="" uploadImages="" overridePreview={() => {}} on:change={handleChange} />
